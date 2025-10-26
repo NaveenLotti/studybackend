@@ -1,6 +1,6 @@
 import express from "express";
 import { createRoom, deleteRoomById, getAllRooms, getRoomById, searchRooms } from "../Controllers/RoomController.js";
-import authMiddleware from "../middleware/authMiddleware.js";
+import authMiddleware from "../Middleware/authMiddleware.js";
 
 const router = express.Router();
 

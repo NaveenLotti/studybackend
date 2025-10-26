@@ -1,5 +1,5 @@
-import Room from "../models/Room.js";
-import generateRoomCode from "../utils/generateRoomCode.js";
+import Room from "../Models/Room.js";
+import generateRoomCode from "../../utils/generateRoomCode.js";
 
 export const createRoom = async (req, res) => {
   const { roomName, topics, maxUsers, isPrivate } = req.body;
@@ -10,7 +10,7 @@ export const createRoom = async (req, res) => {
       topics,
       maxUsers,
       isPrivate,
-      createdBy: req.user._id, 
+      createdBy: req.user._id,
     };
 
     if (isPrivate) {
