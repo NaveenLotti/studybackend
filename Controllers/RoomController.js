@@ -1,5 +1,5 @@
 import Room from "../Models/Room.js";
-import generateRoomCode from "../../utils/generateRoomCode.js";
+import generateRoomCode from "../utils/generateRoomCode.js";
 
 export const createRoom = async (req, res) => {
   const { roomName, topics, maxUsers, isPrivate } = req.body;

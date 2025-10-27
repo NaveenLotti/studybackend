@@ -8,8 +8,16 @@ import roomRoutes from "./Routes/roomRoutes.js";
 dotenv.config();
 connectDB();
 
+const allowedOrigins = [
+    "http://localhost:5173",
+    "https://studyroomss.vercel.app"
+]
+
 const app = express();
-app.use(cors({ origin: "http://localhost:5173/" }));
+app.use(cors({
+    origin: allowedOrigins,
+    credentials: true
+}));
 app.use(express.json());
 
 app.use("/api/auth", authRoutes);
